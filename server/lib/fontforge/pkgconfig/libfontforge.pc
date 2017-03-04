@@ -1,0 +1,17 @@
+prefix=/usr/local/Cellar/fontforge/20161012
+exec_prefix=${prefix}
+bindir=${exec_prefix}/bin
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+datarootdir=${prefix}/share
+mandir=${datarootdir}/man
+localedir=${datarootdir}/locale
+
+Name: libfontforge
+Description: a font manipulation library.
+Version: 2.0.20161004
+Requires: 
+Requires.private:  python-2.7 cairo zlib
+Libs: -L${exec_prefix}/lib -lfontforge
+Libs.private:  -lgioftp -lgutils -lgunicode  -ljpeg  -lpng  -ltiff  -lreadline  -lltdl -Wl,//System/Library/Frameworks/Cocoa.framework/Cocoa -Wl,/System/Library/Frameworks/CoreServices.framework/CoreServices -lltdl 
+Cflags: -I${includedir}/fontforge
